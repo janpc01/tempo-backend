@@ -8,10 +8,10 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: tempo 
-  ECS_SERVICE: tempo-backend-service             # name of the service
-  ECS_CLUSTER: TempoCluster                      # name of the cluster
-  ECS_TASK_DEFINITION: .aws/task-definition.json # path of the JSON task definition
-  CONTAINER_NAME: "tempo"                        # name of the container name in the task definition
+  ECS_SERVICE: tempo-backend-service-alb-8080             # name of the service
+  ECS_CLUSTER: TempoCluster                               # name of the cluster
+  ECS_TASK_DEFINITION: .aws/task-definition.json          # path of the JSON task definition
+  CONTAINER_NAME: "tempo"                                 # name of the container name in the task definition
 
 jobs:
   deploy:
