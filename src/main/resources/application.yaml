@@ -2,13 +2,13 @@ spring:
   application:
     name: tempo
   datasource:
-    url: jdbc:postgresql://${POSTGRESQL_HOST}:${POSTGRESQL_PORT}/${POSTGRESQL_DB}
+    url: jdbc:postgresql://{POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST}/${POSTGRESQL_DB}?sslmode=require
     username: ${POSTGRESQL_USERNAME}
     password: ${POSTGRESQL_PASSWORD}
 logging:
   level:
     org.springframework: DEBUG
-    org.hibernate: DEBUG
-    org.flywaydb: DEBUG
+    org.hibernate: ERROR
+    org.flywaydb: ERROR
     org.postgresql: DEBUG
-    org.testcontainers: DEBUG
+    org.testcontainers: ERROR
