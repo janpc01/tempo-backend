@@ -2,7 +2,7 @@ spring:
   application:
     name: tempo
   datasource:
-    url: jdbc:postgresql://{POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST}/${POSTGRESQL_DB}?sslmode=require
+    url: jdbc:postgresql://${POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST}/${POSTGRESQL_DB}?sslmode=require
     username: ${POSTGRESQL_USERNAME}
     password: ${POSTGRESQL_PASSWORD}
 logging:
