@@ -1,16 +1,16 @@
 spring:
   application:
     name: tempo
-  config:
-    import: 
-      - aws-secretsmanager:POSTGRESQL_HOST
-      - aws-secretsmanager:POSTGRESQL_USERNAME
-      - aws-secretsmanager:POSTGRESQL_PASSWORD
-      - aws-secretsmanager:POSTGRESQL_DB
-  cloud:
-    aws:
-      secrets-manager:
-        enabled: true
+  # config:
+  #   import: 
+  #     - aws-secretsmanager:POSTGRESQL_HOST
+  #     - aws-secretsmanager:POSTGRESQL_USERNAME
+  #     - aws-secretsmanager:POSTGRESQL_PASSWORD
+  #     - aws-secretsmanager:POSTGRESQL_DB
+  # cloud:
+  #   aws:
+  #     secrets-manager:
+  #       enabled: true
   datasource:
     url: jdbc:postgresql://${POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST}/${POSTGRESQL_DB}?sslmode=require
     username: ${POSTGRESQL_USERNAME}
