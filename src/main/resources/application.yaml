@@ -12,9 +12,9 @@ spring:
   #     secrets-manager:
   #       enabled: true
   datasource:
-    url: jdbc:postgresql://${POSTGRESQL_USERNAME.value}:${POSTGRESQL_PASSWORD.value}@${POSTGRESQL_HOST.value}/${POSTGRESQL_DB.value}?sslmode=require
-    username: ${POSTGRESQL_USERNAME.value}
-    password: ${POSTGRESQL_PASSWORD.value}
+    url: jdbc:postgresql://${POSTGRESQL_USERNAME.POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD.POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST.POSTGRESQL_HOST}/${POSTGRESQL_DB.POSTGRESQL_DB}?sslmode=require
+    username: ${POSTGRESQL_USERNAME.POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD.POSTGRESQL_PASSWORD}
 logging:
   level:
     org.springframework: ERROR
