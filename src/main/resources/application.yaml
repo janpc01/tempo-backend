@@ -12,14 +12,14 @@ spring:
   #     secrets-manager:
   #       enabled: true
   datasource:
-    url: jdbc:postgresql://${POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST}/${POSTGRESQL_DB}?sslmode=require
-    username: ${POSTGRESQL_USERNAME}
-    password: ${POSTGRESQL_PASSWORD}
+    url: jdbc:postgresql://${POSTGRESQL_USERNAME.value}:${POSTGRESQL_PASSWORD.value}@${POSTGRESQL_HOST.value}/${POSTGRESQL_DB.value}?sslmode=require
+    username: ${POSTGRESQL_USERNAME.value}
+    password: ${POSTGRESQL_PASSWORD.value}
 logging:
   level:
-    org.springframework: DEBUG
+    org.springframework: ERROR
     org.hibernate: ERROR
     org.flywaydb: ERROR
-    org.postgresql: DEBUG
+    org.postgresql: ERROR
     org.testcontainers: ERROR
-    io.awspring.cloud: DEBUG
+    io.awspring.cloud: ERROR
