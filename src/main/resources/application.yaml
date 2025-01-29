@@ -1,6 +1,12 @@
 spring:
   application:
     name: tempo
+  config:
+    import: aws-secretsmanager:/secrets/POSTGRESQL_HOST;/secrets/POSTGRESQL_USERNAME;/secrets/POSTGRESQL_PASSWORD;/secrets/POSTGRESQL_DB
+  cloud:
+    aws:
+      secrets-manager:
+        enabled: true
   datasource:
     url: jdbc:postgresql://${POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@${POSTGRESQL_HOST}/${POSTGRESQL_DB}?sslmode=require
     username: ${POSTGRESQL_USERNAME}
@@ -12,3 +18,4 @@ logging:
     org.flywaydb: ERROR
     org.postgresql: DEBUG
     org.testcontainers: ERROR
+    io.awspring.cloud: DEBUG
