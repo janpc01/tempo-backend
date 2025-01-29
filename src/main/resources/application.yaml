@@ -3,10 +3,10 @@ spring:
     name: tempo
   config:
     import: 
-      - aws-secretsmanager:/secrets/POSTGRESQL_HOST
-      - aws-secretsmanager:/secrets/POSTGRESQL_USERNAME
-      - aws-secretsmanager:/secrets/POSTGRESQL_PASSWORD
-      - aws-secretsmanager:/secrets/POSTGRESQL_DB
+      - aws-secretsmanager:POSTGRESQL_HOST
+      - aws-secretsmanager:POSTGRESQL_USERNAME
+      - aws-secretsmanager:POSTGRESQL_PASSWORD
+      - aws-secretsmanager:POSTGRESQL_DB
   cloud:
     aws:
       secrets-manager:
