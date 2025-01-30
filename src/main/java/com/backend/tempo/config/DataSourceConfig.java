@@ -23,7 +23,7 @@ public class DataSourceConfig {
         String password = secret.getString("POSTGRESQL_PASSWORD");
 
         // Construct JDBC URL
-        String jdbcUrl = String.format("jdbc:postgresql://%s:5432/%s?sslmode=require", host, dbName);
+        String jdbcUrl = String.format("jdbc:postgresql://%s:5432/%s", host, dbName);
         // jdbc:postgresql://<host>:<port>/<dbname>?sslmode=require
 
 
