@@ -1,6 +1,5 @@
 package com.backend.tempo.config;
 
-import com.backend.tempo.services.AWSSecretsService;
 import org.json.JSONObject;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,10 +13,10 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource() {
         // Fetch secret containing all DB credentials (Modify "POSTGRESQL_SECRET" to your actual secret name)
-        String secretJson = AWSSecretsService.getSecret("POSTGRESQL_SECRET");
+        String postgresSecret = System.getenv("POSTGRESQL_SECRET");
 
         // Parse JSON secret
-        JSONObject secret = new JSONObject(secretJson);
+        JSONObject secret = new JSONObject(postgresSecret);
         String host = secret.getString("POSTGRESQL_HOST");
         String dbName = secret.getString("POSTGRESQL_DB");
         String username = secret.getString("POSTGRESQL_USERNAME");
