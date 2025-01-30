@@ -1,14 +1,11 @@
 spring:
   application:
     name: tempo
-  flyway:
-    enabled: false
 
 logging:
   level:
     org.springframework: ERROR
     org.hibernate: ERROR
-    org.flywaydb: DEBUG
     org.postgresql: ERROR
     org.testcontainers: ERROR
     io.awspring.cloud: ERROR
