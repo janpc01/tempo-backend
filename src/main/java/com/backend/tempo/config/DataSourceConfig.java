@@ -19,7 +19,7 @@ public class DataSourceConfig {
         JSONObject secret = new JSONObject(postgresSecret);
         String host = secret.getString("POSTGRESQL_HOST");
         String dbName = secret.getString("POSTGRESQL_DB");
-        String username = secret.getString("POSTGRESQL_USERNAME");
+        String username = secret.getString("POSTGRESQL_USER");
         String password = secret.getString("POSTGRESQL_PASSWORD");
 
         // Construct JDBC URL
