@@ -1,6 +1,9 @@
 spring:
   application:
     name: tempo
+  flyway:
+    enabled: true
+    clean-on-validation-error: true
 
 logging:
   level:
