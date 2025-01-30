@@ -1,11 +1,3 @@
 spring:
   application:
     name: tempo
-
-logging:
-  level:
-    org.springframework: ERROR
-    org.hibernate: ERROR
-    org.postgresql: ERROR
-    org.testcontainers: ERROR
-    io.awspring.cloud: ERROR
